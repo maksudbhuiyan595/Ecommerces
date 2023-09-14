@@ -25,6 +25,8 @@
   <link href="{{ asset('ui/backend')}}/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="{{ asset('ui/backend')}}/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="{{ asset('ui/backend')}}/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- toastr css  -->
+  <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('ui/backend')}}/assets/css/style.css" rel="stylesheet">
@@ -72,6 +74,11 @@
   <script src="{{ asset('ui/backend')}}/assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="{{ asset('ui/backend')}}/assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="{{ asset('ui/backend')}}/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- toastr js -->
+  <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
 
   <!-- Template Main JS File -->
   <script src="{{ asset('ui/backend')}}/assets/js/main.js"></script>

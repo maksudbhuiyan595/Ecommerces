@@ -6,14 +6,10 @@
     <div class="row">
         <div class="col-md-10" >
             <div class="card">
-                <div class="card-header text-center"><strong>Category Create Form</strong></div>
+                <div class="card-header text-center"><strong>Category Edit Form</strong></div>
                 <div class="card-body">
 
-                @if(Session::has('message'))
-                 <p class="alert alert-info">{{ Session::get('message') }}</p>
-                @endif
-
-                <form action="{{route('category.store')}}" method="post">
+                <form action="{{route('category.update',$categories->id)}}" method="post">
                     @csrf
                     <div class="mb-3">
                         <label for="" class="form-label">Category Name</label>
@@ -64,7 +60,7 @@
                     </div>
                     
 
-                    <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                    <button type="submit" class="btn btn-sm btn-success">Update</button>
                     </form>
                 </div>
             </div>
