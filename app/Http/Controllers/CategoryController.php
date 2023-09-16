@@ -21,13 +21,13 @@ class CategoryController extends Controller
             'name'           =>['required','unique:categories','min:3', 'max:50'],
             'slug'           => ['required'],
             'subcategory_num'=>['required'],
-            'product_count'    =>['required'],  
+             
         ]);
         Category::create([
             'name'              =>$request->name,
             'slug'              =>$request->slug,
             'subcategory_count' =>$request->subcategory_num,
-            'product_count'     =>$request->product_count,
+            
         ]);
         // Toastr::success('message', 'title', ['options']);
         Toastr::success('successfully created.', 'Category');
@@ -49,14 +49,14 @@ class CategoryController extends Controller
             'name'           =>['required','unique:categories','min:3', 'max:50'],
             'slug'           => ['required'],
             'subcategory_num'=>['required'],
-            'product_count'    =>['required'],  
+              
         ]);
         $categoy=Category::find($id);
         $categoy->update([
             'name'              =>$request->name,
             'slug'              =>$request->slug,
             'subcategory_count' =>$request->subcategory_num,
-            'product_count'     =>$request->product_count,
+            
         ]);
         Toastr::success('successfully Updated.', 'Category');
         return redirect()->back();

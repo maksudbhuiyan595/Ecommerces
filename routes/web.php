@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,6 +45,14 @@ Route::get('/admin', function () {
     Route::get('category-edit/{id}',[CategoryController::class, 'edit'])->name('category.edit');
     Route::post('category-update/{id}',[CategoryController::class, 'update'])->name('category.update');
     Route::get('category-destroy/{id}',[CategoryController::class, 'destroy'])->name('category.destroy');
+
+    Route::get('subcategory-list',[SubcategoryController::class, 'index'])->name('subcategory.index');
+    Route::get('subcategory-create',[SubcategoryController::class, 'create'])->name('subcategory.create');
+    Route::post('subcategory-store',[SubcategoryController::class, 'store'])->name('subcategory.store');
+    Route::get('subcategory-view/{id}',[SubcategoryController::class, 'view'])->name('subcategory.view');
+    Route::get('subcategory-edit/{id}',[SubcategoryController::class, 'edit'])->name('subcategory.edit');
+    // Route::post('category-update/{id}',[CategoryController::class, 'update'])->name('category.update');
+    // Route::get('category-destroy/{id}',[CategoryController::class, 'destroy'])->name('category.destroy');
 
 
 

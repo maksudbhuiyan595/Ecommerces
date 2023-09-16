@@ -52,16 +52,7 @@
                          @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="" class="form-label">Product Count</label>
-                        <input type="number" class="form-control @error('product_count') is-invalid @enderror" name="product_count" placeholder="product count" value="{{old('product_count')}}">
-
-                        @error('product_count')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                         @enderror
-                    </div>
+                    
                     
 
                     <button type="submit" class="btn btn-sm btn-success">Submit</button>
